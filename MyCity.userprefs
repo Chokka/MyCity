@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{4F0DC7DB-9437-48D9-B28E-0F62E8D88618}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyCity/MyCity/Models/UserRegistration.cs">
+    <Files>
+      <File FileName="MyCity/MyCity/Pages/MyLocationPage.xaml" Line="18" Column="1" />
+      <File FileName="MyCity/MyCity/Pages/MyLocationPage.xaml.cs" Line="62" Column="6" />
+      <File FileName="MyCity/MyCity/Manager/DBManager.cs" Line="223" Column="39" />
+      <File FileName="MyCity/MyCity/Models/MarkMyLocation.cs" Line="13" Column="14" />
+      <File FileName="MyCity/MyCity/Models/CustomPin.cs" Line="12" Column="1" />
+      <File FileName="MyCity/MyCity/Models/UserRegistration.cs" Line="1" Column="14" />
+      <File FileName="MyCity/MyCity/Models/Restaurant.cs" Line="4" Column="25" />
+      <File FileName="MyCity/MyCity/Models/Address.cs" Line="5" Column="3" />
+      <File FileName="MyCity/MyCity/ViewModels/RetaurantListViewModel.cs" Line="64" Column="48" />
+      <File FileName="MyCity/MyCity.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="MyCity/MyCity/Pages/RestaurantsPage.xaml" Line="25" Column="61" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/admin/Documents/work/Freelance Outsourced Code/MyCity/MyCity/MyCity/ViewModels/RetaurantListViewModel.cs" line="46" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MyCity.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B03881DD-ECDF-4AD2-96DE-495A967EACA4" />
+</Properties>

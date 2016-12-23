@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+		x:Class="MyCity.MyLocationPage">
+	<ContentPage.Content>
+		<AbsoluteLayout x:Name = "layout" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0">
+			<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" 
+				AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.2, AutoSize" />
+			<maps:Map x:Name="_Map" IsVisible="true" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0" />
+			<!--<controls:ImageButton Image = "map_pin.png" />-->
+			<!--<controls:ImageButton Text="Twitter" BackgroundColor="#01abdf" TextColor="#ffffff" Image="map_pin.png" 
+				Orientation="ImageToLeft"  AbsoluteLayout.LayoutBounds = "0.7, 0.7,35,50" />-->
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

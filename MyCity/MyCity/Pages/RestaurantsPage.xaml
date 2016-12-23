@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+		xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" 
+		x:Class="MyCity.RestaurantsPage"
+		x:Name="acquaintanceListPage" NavigationPage.BackButtonTitle="List">
+	
+	<ContentPage.Content>
+		<OnPlatform x:TypeArguments="View">
+			<OnPlatform.iOS>
+				<!-- Using RetailElement as the CachingStrategy only on iOS and only until this fix is released: https://github.com/xamarin/Xamarin.Forms/pull/338 -->
+				<ListView ItemsSource="{Binding Retaurants}" CachingStrategy="RetainElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" IsPullToRefreshEnabled="true" 
+						RefreshCommand="{Binding RefreshRetaurantsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell StyleId="disclosure" Height="60">
+								<AbsoluteLayout>
+									<StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+										<ContentView Margin="3" WidthRequest="54">
+											<ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50"
+													DownsampleToViewSize="true" Source="{Binding SmallPhotoUrl}" LoadingPlaceholder="profile_generic.png">
+												<!--<ffimageloading:CachedImage.Transformations>
+													<fftransformations:CircleTransformation/>
+												</ffimageloading:CachedImage.Transformations>-->
+											</ffimageloading:CachedImage>
+										</ContentView>
+										<ContentView Padding="10,0,0,0">
+											<StackLayout Spacing="0">
+												<Label Text="{Binding Address}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+												<Label Text="{Binding Name}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+											</StackLayout>
+										</ContentView>
+									</StackLayout>
+								</AbsoluteLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</OnPlatform.iOS>
+			
+			<OnPlatform.Android>
+				<AbsoluteLayout>
+					<AbsoluteLayout.Children>
+						<ListView ItemsSource="{Binding Retaurants}" CachingStrategy="RecycleElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" 
+								IsPullToRefreshEnabled="true" RefreshCommand="{Binding RefreshRetaurantsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+							<ListView.ItemTemplate>
+								<DataTemplate>
+									<ViewCell StyleId="disclosure" Height="60">
+										<ContentView Padding="10,0">
+											<StackLayout Orientation="Horizontal" Spacing="0">
+												<ContentView Margin="3" WidthRequest="54">
+													<ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50" DownsampleToViewSize="true" Source="{Binding SmallPhotoUrl}" 
+															LoadingPlaceholder="profile_generic.png">
+														<ffimageloading:CachedImage.Transformations>
+															<fftransformations:CircleTransformation />
+														</ffimageloading:CachedImage.Transformations>
+													</ffimageloading:CachedImage>
+												</ContentView>
+												<ContentView Padding="10,0,0,0">
+													<StackLayout Spacing="0">
+														<Label Text="{Binding Address}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+														<Label Text="{Binding Name}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+													</StackLayout>
+												</ContentView>
+											</StackLayout>
+										</ContentView>
+									</ViewCell>
+								</DataTemplate>
+							</ListView.ItemTemplate>
+						</ListView>
+					</AbsoluteLayout.Children>
+				</AbsoluteLayout>
+			</OnPlatform.Android>
+		</OnPlatform>
+	</ContentPage.Content>
+</ContentPage>
