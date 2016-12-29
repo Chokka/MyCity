@@ -112,7 +112,3 @@ E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\obj\Debu
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\obj\Debug\MyCity.pdb
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\obj\Debug\MyCity.dll.mdb
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\bin\Debug\MyCity.dll.mdb
-E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\obj\Debug\MyCity.dll.mdb
-E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\bin\Debug\MyCity.dll.mdb
-E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\obj\Debug\MyCity.dll.mdb
-E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity\bin\Debug\MyCity.dll.mdb

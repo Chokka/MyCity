@@ -12,7 +12,8 @@ namespace MyCity
 
         public SettingsPage()
         {
-            InitializeComponent();
+			InitializeComponent();
+			NavigationPage.SetHasNavigationBar(this, true);
 			_Settins = new ObservableRangeCollection<Value>();
 			var value1 = new Value
 			{

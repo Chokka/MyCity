@@ -7,6 +7,8 @@ using Xamarin.Forms.Maps.iOS;
 using MapKit;
 using UIKit;
 using System.Diagnostics;
+using Foundation;
+using CoreGraphics;
 
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
 namespace MyCity.iOS
@@ -48,6 +50,7 @@ namespace MyCity.iOS
 			{
 				annotationView = new MKAnnotationView();
 				annotationView.Image = UIImage.FromFile(imageName);
+				annotationView.Frame = new CGRect(0, 0, 45, 45);
 			}
 			annotationView.CanShowCallout = true;
 
