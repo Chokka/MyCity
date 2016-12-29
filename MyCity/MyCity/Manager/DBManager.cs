@@ -7,8 +7,19 @@ namespace MyCity
 {
 	public class DBManager
 	{
+
+		private static DBManager instance = null;
+		public static DBManager sharedInstance() {
+			if (instance == null)
+			{
+				instance = new DBManager();
+			}
+			return instance;
+		}
+
 		SQLiteConnection _db;
-		public DBManager()
+
+		private DBManager()
 		{
 			_db = DependencyService.Get<ISQLite>().GetConnection();
 		}
@@ -154,77 +165,77 @@ namespace MyCity
 		/*----- Pin Manage -----*/
 		public void AddPin(CustomPin item)
 		{
-			_db.Execute("insert into CustomPin values(null," + item.PinName + ",'" + item.CreatedDate + "','" + item.ModifiedDate + "');");
-
+			string sql = "insert into Pin values("+item.Id+",'" + item.PinName + "','" + item.CreatedDate + "','" + item.ModifiedDate + "'," + item.IsActive + ");";
+			_db.Execute(sql);
 		}
 
 		public void DeletePin(int flightId)
 		{
-			_db.Execute("delete from CustomPin where flightId=?", flightId);
+			_db.Execute("delete from Pin where flightId=?", flightId);
 		}
 		public void UpdatePin(CustomPin item)
 		{
-			_db.Execute("update CustomPin set airlineName='" + item.PinName + "', airlineImageURL='" + item.CreatedDate
+			_db.Execute("update Pin set airlineName='" + item.PinName + "', airlineImageURL='" + item.CreatedDate
 			            + "', departureTime='" + item.ModifiedDate + "' where Id=" + item.Id);
 		}
 
 		public IEnumerable<CustomPin> GetPins()
 		{
-			return _db.Query<CustomPin>("select * from CustomPin where 1");
+			return _db.Query<CustomPin>("select * from Pin where 1");
 		}
 
 		public CustomPin GetPin(string id)
 		{
-			var result = _db.Query<CustomPin>("select * from CustomPin where flightId=?", id);
+			var result = _db.Query<CustomPin>("select * from Pin where flightId=?", id);
 			if (result.Count > 0)
 				return result.First();
 			else
 				return null;
 		}
 
-		/*----- Restaurant Manage 
+		/*----- Restaurant Manage -----*/
 		public void AddRestaurant(Restaurant item)
 		{
-			_db.Execute("insert into tracked_flights values(" + item.flightId + ",'" + item.airlineName + "'," + item.flightNumber + ",'" + item.airlineImageURL
-						+ "','" + item.departureTime + "', '" + item.departureSTime + "','" + item.departureETime
-						+ "','" + item.arrivalTime + "','" + item.arrivalSTime + "','" + item.arrivalETime
-						+ "','" + item.trackedTime + "','" + item.status + "'," + item.isActive + "," + item.isArrival + "," + item.lat + "," + item.lon + ");");
+			_db.Execute("insert into RestaurantList values(null,'" + item.categoryName + "','" + item.BusinessName + "'," + item.Address1 + ",'" + item.Address2
+			            + "','" + item.City + "', '" + item.State + "','" + item.Mobile_Number
+			            + "','" + item.Phone_Number1 + "','" + item.Fax + "','" + item.Email_Id
+			            + "','" + item.WebSite + "','" + item.BusinessOwner + "','" + item.BusinessManager + "'," + item.IsFlag + ");");
 
 		}
 
 		public void DeleteRestaurant(int flightId)
 		{
-			_db.Execute("delete from tracked_flights where flightId=?", flightId);
+			_db.Execute("delete from RestaurantList where flightId=?", flightId);
 		}
 		public void UpdateRestaurant(Restaurant item)
 		{
-			_db.Execute("update tracked_flights set airlineName='" + item.airlineName + "', airlineImageURL='" + item.airlineImageURL
-						+ "', departureTime='" + item.departureTime + "', departureSTime='" + item.departureSTime + "', departureETime='" + item.departureETime
-						+ "', arrivalTime='" + item.arrivalTime + "', arrivalSTime='" + item.arrivalSTime + "', arrivalETime='" + item.arrivalETime
-						+ "', trackedTime='" + item.trackedTime + "',status='" + item.status + "', isActive=" + item.isActive + ", isArrival=" + item.isArrival
-						+ ", lat=" + item.lat + ", lon=" + item.lon + " where flightId=" + item.flightId);
+			_db.Execute("update RestaurantList set airlineName='" + item.categoryName + "', airlineImageURL='" + item.BusinessName
+			            + "', departureTime='" + item.Address1 + "', departureSTime='" + item.Address2 + "', departureETime='" + item.City
+			            + "', arrivalTime='" + item.State + "', arrivalSTime='" + item.Mobile_Number + "', arrivalETime='" + item.Phone_Number1
+			            + "', trackedTime='" + item.Fax + "',status='" + item.Email_Id + "', isActive=" + item.WebSite + ", isArrival=" + item.BusinessOwner
+			            + ", lat='" + item.BusinessManager + "', lon=" + item.IsFlag + " where id=" + item.id);
 		}
 
 		public IEnumerable<Restaurant> GetRestaurants()
 		{
-			return _db.Query<Restaurant>("select * from tracked_flights where 1");
+			return _db.Query<Restaurant>("select * from RestaurantList where 1");
 		}
 
 		public Restaurant GetRestaurant(string id)
 		{
-			var result = _db.Query<Restaurant>("select * from tracked_flights where flightId=?", id);
+			var result = _db.Query<Restaurant>("select * from RestaurantList where id=?", id);
 			if (result.Count > 0)
 				return result.First();
 			else
 				return null;
-		} -----*/
+		} 
 
 		/*----- User Manage -----*/
-		public void AddUser(UserRegistration item)
+		public int AddUser(UserRegistration item)
 		{
-			_db.Execute("insert into UserRegistration values(" + item.UserId + ",'" + item.UserName + "'," + item.PhoneNumber + ",'" + item.EmailId
-			            + "','" + item.Password + "', '" + item.CreatedDate + "','" + item.ModifiedDate
-						+ "');");
+			string sql = "insert into UserRegistration values(" + item.Id + ",'" + item.UserName + "','"+item.FirstName+"','"+item.LastName+"'," + item.PhoneNumber + ",'" + item.EmailId
+			              + "','" + item.Password + "',"+item.IsActive+", '" + item.CreatedDate + "','" + item.ModifiedDate + "');";
+			return _db.Execute(sql);
 
 		}
 
@@ -232,11 +243,12 @@ namespace MyCity
 		{
 			_db.Execute("delete from UserRegistration where flightId=?", flightId);
 		}
+
 		public void UpdateUser(UserRegistration item)
 		{
-			_db.Execute("update UserRegistration set UserName='" + item.UserName
+			_db.Execute("update UserRegistration set UserName='" + item.UserName + "',FirstName='"+item.FirstName+"',LastName='"+item.LastName
 			            + "', PhoneNumber='" + item.PhoneNumber + "', EmailId='" + item.EmailId + "', Password='" + item.Password
-			            + "', CreatedDate='" + item.CreatedDate + "', ModifiedDate='" + item.ModifiedDate + "' where UserId=" + item.UserId);
+			            + "', CreatedDate='" + item.CreatedDate + "', ModifiedDate='" + item.ModifiedDate + "' where UserId=" + item.Id);
 		}
 
 		public IEnumerable<UserRegistration> GetUsers()
@@ -253,6 +265,14 @@ namespace MyCity
 				return null;
 		}
 
+		public UserRegistration GetUser(string email, string pass)
+		{
+			var result = _db.Query<UserRegistration>("select * from UserRegistration where EmailId='"+email+"' and Password='"+pass+"'");
+			if (result.Count > 0)
+				return result.First();
+			else
+				return null;
+		}
 	}
 }
 

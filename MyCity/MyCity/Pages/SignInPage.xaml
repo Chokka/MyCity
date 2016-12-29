@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyCity.SignInPage">
+	<Grid VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" Padding = "10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "1*"/>
+			<RowDefinition Height = "1*"/>
+			<RowDefinition Height = "1*"/>
+			<RowDefinition Height = "1*"/>
+			<RowDefinition Height = "1*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width = "1*"/>
+			<ColumnDefinition Width = "1*"/>
+			<ColumnDefinition Width = "1*"/>
+		</Grid.ColumnDefinitions>
+		<Label Text = "Email" Grid.Row = "0" Grid.Column = "0" VerticalOptions = "EndAndExpand"/>
+		<Entry x:Name = "emailEntry" Placeholder = "Email" PlaceholderColor = "#ddd" Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "3"/>
+		<Label Text = "Password" Grid.Row = "2" Grid.Column = "0" VerticalOptions = "EndAndExpand"/>
+		<Entry x:Name = "passwordEntry" Placeholder = "Password" PlaceholderColor = "#ddd" IsPassword = "true" Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan = "3"/>
+		<Button Text = "Sign In" x:Name = "signinButton" BackgroundColor = "#01b3f0" TextColor = "#fff" Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan = "3"/>
+	</Grid>
+</ContentPage>

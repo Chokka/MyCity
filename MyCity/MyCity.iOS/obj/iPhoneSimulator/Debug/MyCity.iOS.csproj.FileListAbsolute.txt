@@ -7,6 +7,7 @@ E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Platform.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Transformations.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\MyCity.dll
+E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Plugin.ExternalMaps.Abstractions.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Plugin.ExternalMaps.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Plugin.Geolocator.Abstractions.dll
@@ -31,7 +32,9 @@ E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\XLabs.Platform.iOS.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\XLabs.Serialization.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\MvvmHelpers.dll
+E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.Primitives.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\MyCity.pdb
+E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\MyCity.dll.mdb
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\WebP.Touch.xml
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Plugin.ExternalMaps.Abstractions.xml
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Plugin.ExternalMaps.xml
@@ -58,7 +61,9 @@ E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\XLabs.Serialization.xml
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\XLabs.Forms.xml
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\XLabs.Forms.iOS.xml
+E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.xml
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\MvvmHelpers.xml
+E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.Primitives.xml
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
@@ -125,6 +130,7 @@ E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\omg_emoji.png
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\map_pin.png
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\close.png
+E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\restaurant_icon.png
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\Icon.png
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\Icon@2x.png
 E:\7_VStudioWork\3_Chokka_xamarin\solutions\MyCity\MyCity\MyCity\MyCity.iOS\obj\iPhoneSimulator\Debug\optimized\Icon@3x.png

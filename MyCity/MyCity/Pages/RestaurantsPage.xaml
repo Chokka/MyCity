@@ -19,16 +19,13 @@
 									<StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
 										<ContentView Margin="3" WidthRequest="54">
 											<ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50"
-													DownsampleToViewSize="true" Source="{Binding SmallPhotoUrl}" LoadingPlaceholder="profile_generic.png">
-												<!--<ffimageloading:CachedImage.Transformations>
-													<fftransformations:CircleTransformation/>
-												</ffimageloading:CachedImage.Transformations>-->
+													DownsampleToViewSize="true" Source="restaurant_icon.png" LoadingPlaceholder="profile_generic.png">
 											</ffimageloading:CachedImage>
 										</ContentView>
 										<ContentView Padding="10,0,0,0">
 											<StackLayout Spacing="0">
-												<Label Text="{Binding Address}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
-												<Label Text="{Binding Name}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+												<Label Text="{Binding categoryName}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+												<Label Text="{Binding BusinessName}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
 											</StackLayout>
 										</ContentView>
 									</StackLayout>

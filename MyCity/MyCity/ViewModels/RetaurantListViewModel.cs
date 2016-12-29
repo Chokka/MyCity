@@ -36,7 +36,7 @@ namespace MyCity
             LoadRetaurantsCommand.ChangeCanExecute();
             _Retaurants.Clear();
             if (Retaurants.Count < 1)
-                await FetchAcquaintances();
+                FetchAcquaintances();
 
             LoadRetaurantsCommand.ChangeCanExecute();
         }
@@ -53,28 +53,26 @@ namespace MyCity
         {
             RefreshRetaurantsCommand.ChangeCanExecute();
 
-            await FetchAcquaintances();
+            FetchAcquaintances();
 
             RefreshRetaurantsCommand.ChangeCanExecute();
         }
 
-        async Task FetchAcquaintances()
+		void FetchAcquaintances()
         {
             IsBusy = true;
-			var list = new ObservableRangeCollection<Restaurant>();
-			var item = new Restaurant { Name = "Name", Address = "Address" };
-			var item1 = new Restaurant { Name = "Name1", Address = "Address" };
-			var item2 = new Restaurant { Name = "Name2", Address = "Address" };
-			var item3 = new Restaurant { Name = "Name3", Address = "Address"};
-
-			//Retaurants = new ObservableRangeCollection<Retaurant>(await _DataSource.GetItems());
-			list.Add(item);
-			list.Add(item1);
-			list.Add(item2);
-			list.Add(item3);
-			Retaurants = list;
+			Retaurants = GetRestaruantsFromDB();
             IsBusy = false;
         }
+
+		ObservableRangeCollection<Restaurant> GetRestaruantsFromDB() { 
+			var list = DBManager.sharedInstance().GetRestaurants();
+			ObservableRangeCollection<Restaurant> result = new ObservableRangeCollection<Restaurant>();
+			foreach (Restaurant item in list) {
+				result.Add(item);
+			}
+			return result;
+		}
     }
 }
 

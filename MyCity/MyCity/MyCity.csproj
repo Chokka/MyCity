@@ -74,6 +74,18 @@
     <Compile Include="Models\MarkMyLocation.cs" />
     <Compile Include="Models\CustomPin.cs" />
     <Compile Include="Models\UserRegistration.cs" />
+    <Compile Include="Service\MapService.cs" />
+    <Compile Include="Pages\Custom\CustomMap.cs" />
+    <Compile Include="Models\Value.cs" />
+    <Compile Include="Pages\SignInPage.xaml.cs">
+      <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ContactUsPage.cs" />
+    <Compile Include="Models\Singleton.cs" />
+    <Compile Include="ViewModels\SettingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -105,6 +117,12 @@
     <EmbeddedResource Include="Pages\Custom\EnojiView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SignInPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
@@ -112,6 +130,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Manager\" />
     <Folder Include="Pages\Custom\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -182,6 +201,15 @@
     </Reference>
     <Reference Include="Rg.Plugins.Popup.Platform">
       <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\portable-win+net45+wp8+win8+wpa81\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

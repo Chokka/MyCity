@@ -17,16 +17,16 @@ namespace MyCity {
     public partial class MyLocationPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.AbsoluteLayout layout;
+        private global::MyCity.CustomMap _map;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Maps.Map _Map;
+        private global::XLabs.Forms.Controls.ImageButton pinButton;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MyLocationPage));
-            layout = this.FindByName <global::Xamarin.Forms.AbsoluteLayout>("layout");
-            _Map = this.FindByName <global::Xamarin.Forms.Maps.Map>("_Map");
+            _map = this.FindByName <global::MyCity.CustomMap>("_map");
+            pinButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("pinButton");
         }
     }
 }

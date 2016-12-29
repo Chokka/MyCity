@@ -17,8 +17,36 @@ namespace MyCity {
     public partial class EnojiView : global::Rg.Plugins.Popup.Pages.PopupPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton closeButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton cold_emojiButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton crying_emojiButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton nerd_emojiButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton omg_emojiButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton love_emojiButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ImageButton angry_emojiButton;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(EnojiView));
+            closeButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("closeButton");
+            cold_emojiButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("cold_emojiButton");
+            crying_emojiButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("crying_emojiButton");
+            nerd_emojiButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("nerd_emojiButton");
+            omg_emojiButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("omg_emojiButton");
+            love_emojiButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("love_emojiButton");
+            angry_emojiButton = this.FindByName <global::XLabs.Forms.Controls.ImageButton>("angry_emojiButton");
         }
     }
 }

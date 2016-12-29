@@ -13,11 +13,6 @@ namespace MyCity
 	{
 		protected MyLocationViewModel ViewModel => BindingContext as MyLocationViewModel;
 
-		ImageButton pinButton = new ImageButton { 
-			Image = "map_pin.png",
-			WidthRequest = 35,
-			HeightRequest = 50
-		};
 		public MyLocationPage()
 		{
 			InitializeComponent();
@@ -26,7 +21,6 @@ namespace MyCity
 				
 				Navigation.PushPopupAsync(new EnojiView());
 			};
-			layout.Children.Add(pinButton);
 		}
 
 		protected override async void OnAppearing() {
@@ -40,6 +34,7 @@ namespace MyCity
 			try
 			{
 				position = await ViewModel.GetPosition();
+				this.Title = ""+ await ViewModel.GetCityName(position.Latitude, position.Longitude);
 			}
 			catch (Exception ex)
 			{	
@@ -64,11 +59,11 @@ namespace MyCity
 					Label = "Label",
 					Address = "Address"
 				};
-				_Map.Pins.Clear();
+				_map.Pins.Clear();
 
-				_Map.Pins.Add(pin);
+				_map.Pins.Add(pin);
 			}
-			_Map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(10)));
+			_map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(10)));
 		}
 	}
 }

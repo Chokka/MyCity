@@ -40,3 +40,10 @@
 /Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/bin/Debug/MyCity.dll
 /Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/obj/Debug/MyCity.dll
 /Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/obj/Debug/MyCity.dll.mdb
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/bin/Debug/System.Net.Http.dll
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/bin/Debug/System.Net.Http.Extensions.dll
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/bin/Debug/System.Net.Http.Primitives.dll
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/obj/Debug/MyCity.Pages.SignInPage.xaml
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/obj/Debug/MyCity.Pages.SignUpPage.xaml
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/obj/Debug/MyCity.Pages.SignInPage.xaml.g.cs
+/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/obj/Debug/MyCity.Pages.SignUpPage.xaml.g.cs

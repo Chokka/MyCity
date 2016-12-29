@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
+using System.Net.Http;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using Newtonsoft.Json;
 using Plugin.ExternalMaps;
 using Plugin.ExternalMaps.Abstractions;
 using Plugin.Geolocator;
@@ -46,6 +48,41 @@ namespace MyCity
 
             return p;
         }
+
+		public async Task<object> GetCityName(double latitude, double longitude) { 
+			HttpClient client;
+			client = new HttpClient();
+			client.MaxResponseContentBufferSize = 256000;
+			try
+			{
+				var response = await client.GetAsync("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude);
+				if (response.IsSuccessStatusCode)
+				{
+					var result = await response.Content.ReadAsStringAsync();
+					var json = Newtonsoft.Json.Linq.JObject.Parse(result);
+					var reValue = "" + json["results"][0]["formatted_address"];
+
+					var strArr = reValue.Split(',');
+					if (strArr.Length > 2)
+						return strArr[strArr.Length - 2] + ", " +strArr[strArr.Length - 1];
+					else
+						return "";
+				}
+				else {
+					Debug.WriteLine(@"Failed.");
+					return "Failed";
+				}
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"ERROR {0}", ex.Message);
+				return ex.Message;
+			}
+		}
+
+		public void IconChangeCommand(string imgName) { 
+			
+		}
 
 		public void DisplayGeocodingError()
 		{
