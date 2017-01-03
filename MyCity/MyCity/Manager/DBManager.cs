@@ -129,9 +129,10 @@ namespace MyCity
 		/*----- Location Manage -----*/
 		public void AddLocation(MarkMyLocation item)
 		{
-			_db.Execute("insert into MarkMyLocation values(null," + item.UserId + "," + item.Latitude + "," + item.Longitude + "," + item.PinId
-			            + "','" + item.PinActivatedTime + "', '" + item.PinningAttempts + "'," + item.IsPinActive
-			            + "," + item.IsValidUser + ",'" + item.Weather + "','" + item.PinExpiredTime + "');");
+			string sql = "insert into MarkMyLocation values(null," + item.UserId + "," + item.Latitude + "," + item.Longitude + "," + item.PinId
+						+ ",'" + item.PinActivatedTime + "', " + item.PinningAttempts + "," + item.IsPinActive
+																		 + "," + item.IsValidUser + ",'" + item.Weather + "','null','" + item.PinExpiredTime + "');";
+			_db.Execute(sql);
 
 		}
 
@@ -156,6 +157,14 @@ namespace MyCity
 		public MarkMyLocation GetLocation(string id)
 		{
 			var result = _db.Query<MarkMyLocation>("select * from MarkMyLocation where Id=?", id);
+			if (result.Count > 0)
+				return result.First();
+			else
+				return null;
+		}
+
+		public MarkMyLocation GetLastLocation() { 
+			var result = _db.Query<MarkMyLocation>("select * from MarkMyLocation order by Id desc");
 			if (result.Count > 0)
 				return result.First();
 			else
@@ -187,6 +196,14 @@ namespace MyCity
 		public CustomPin GetPin(string id)
 		{
 			var result = _db.Query<CustomPin>("select * from Pin where flightId=?", id);
+			if (result.Count > 0)
+				return result.First();
+			else
+				return null;
+		}
+
+		public CustomPin GetPinByName(string name) { 
+			var result = _db.Query<CustomPin>("select * from Pin where PinName=?", name);
 			if (result.Count > 0)
 				return result.First();
 			else

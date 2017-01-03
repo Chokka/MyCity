@@ -18,8 +18,9 @@ namespace MyCity
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, true);
 			pinButton.Clicked += (sender, e) => {
-				
-				Navigation.PushPopupAsync(new EnojiView());
+				Navigation.PushPopupAsync(new EnojiView() { 
+					BindingContext = new MyLocationViewModel()
+				});
 			};
 		}
 
