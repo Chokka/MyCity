@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+		xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+		xmlns:local="clr-namespace:MyCity"
+		x:Class="MyCity.MyLocationPage">
+	<ContentPage.Content>
+		<RelativeLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<local:CustomMap x:Name="_map"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+			    RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0}"/>
+			<controls:ImageButton x:Name = "pinButton" Image="map_pin.png" 
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0, Constant=35}"
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=50}"
+			    RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=-50}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=-80}"/>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

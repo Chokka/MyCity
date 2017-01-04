@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyCity.SettingsPage"
              
-              Icon="settings.png"
+             Icon="settings.png"
              Title="Settings">
 
 

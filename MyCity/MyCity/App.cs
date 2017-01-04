@@ -11,8 +11,7 @@ namespace MyCity
     {
         public App()
         {
-
-            MainPage = new MyCity.MainPage();
+			MainPage = new NavigationPage(new MyCity.MainPage());
         }
 
        

@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{4F0DC7DB-9437-48D9-B28E-0F62E8D88618}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyCity/MyCity/Pages/Custom/EnojiView.xaml.cs">
+    <Files>
+      <File FileName="MyCity/MyCity/Manager/DBManager.cs" Line="166" Column="40" />
+      <File FileName="MyCity/MyCity/Pages/Custom/EnojiView.xaml.cs" Line="52" Column="113" />
+      <File FileName="MyCity/MyCity/Service/MapService.cs" Line="6" Column="8" />
+      <File FileName="MyCity/MyCity/Pages/MyLocationPage.xaml.cs" Line="36" Column="5" />
+      <File FileName="MyCity/MyCity/ViewModels/MyLocationViewModel.cs" Line="25" Column="54" />
+      <File FileName="MyCity/MyCity.iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/admin/Documents/work/Freelance Outsourced Code/MyCity/MyCity/MyCity/ViewModels/RetaurantListViewModel.cs" line="46" column="1" />
+      <Breakpoint file="/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/ViewModels/SettingViewModel.cs" line="23" column="1" />
+      <Breakpoint file="/Users/admin/Documents/work/Devil/Freelance/MyCity/MyCity/MyCity/ViewModels/RetaurantListViewModel.cs" line="52" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MyCity.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2681D3C7-2F9B-4C7C-A168-6C0720F019E3" />
+</Properties>

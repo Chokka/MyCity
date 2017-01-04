@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCity.SettingsPage"
+             Icon="settings.png"
+             Title="Settings">
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+			<StackLayout HeightRequest = "44">
+			</StackLayout>
+			<ListView x:Name = "lstView" CachingStrategy="RetainElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell StyleId="disclosure" Height="60">
+							<AbsoluteLayout>
+								<StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+									<ContentView Padding="10,0,0,0">
+										<StackLayout Spacing="0">
+											<Label Text="{Binding Text}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+										</StackLayout>
+									</ContentView>
+								</StackLayout>
+							</AbsoluteLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+  	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCity.CityPage"
+             Icon="city.png" 
+             Title="City" Padding = "2">
+  	<ContentPage.Content>
+		<Grid VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "2" ColumnSpacing = "2">
+			<Grid.RowDefinitions>
+				<RowDefinition Height = "1*"/>
+				<RowDefinition Height = "1*"/>
+				<RowDefinition Height = "1*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width = "1*"/>
+				<ColumnDefinition Width = "1*"/>
+			</Grid.ColumnDefinitions>
+			<Image x:Name = "image1" Source = "image1.png" Aspect = "AspectFill" Grid.Row = "0" Grid.Column = "0"/>
+			<Image x:Name = "image2" Source = "image2.png" Aspect = "AspectFill" Grid.Row = "0" Grid.Column = "1"/>
+			<Image x:Name = "image3" Source = "image3.png" Aspect = "AspectFill" Grid.Row = "1" Grid.Column = "0"/>
+			<Image x:Name = "image4" Source = "image4.png" Aspect = "AspectFill" Grid.Row = "1" Grid.Column = "1"/>
+			<Image x:Name = "image5" Source = "image5.png" Aspect = "AspectFill" Grid.Row = "2" Grid.Column = "0"/>
+			<Image x:Name = "image6" Source = "image6.png" Aspect = "AspectFill" Grid.Row = "2" Grid.Column = "1"/>
+		</Grid>
+  	</ContentPage.Content>
+</ContentPage>
